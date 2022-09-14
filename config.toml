@@ -6,12 +6,3 @@ defaultContentLanguage = 'zh'
 theme = "hugo-book"
 # enableGitInfo = true
 
-[params]
-  BookTheme = 'auto'
-
-  BookToC = true
-  BookSection = 'docs'
-
-  BookSearch = true
-  BookComments = false
-  BookFlatSection = true
