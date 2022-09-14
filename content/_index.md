@@ -2,7 +2,7 @@
 title: 首页
 ---
 
-![](https://user-images.githubusercontent.com/14821269/190135517-c30d58b6-a359-4804-871e-8a37c9233fbf.jpeg)
+![](https://user-images.githubusercontent.com/14821269/190138958-143072c7-4d89-45ca-96c3-e336eae3222e.jpeg))
 
 # “学法、守法、尊法、用法”
 根据《中华人民共和国著作权法》第五条，本作品不适用于该法。如不受其他法律、法规保护，本作品在中国大陆和其他地区属于公有领域。不适用于《中华人民共和国著作权法》的作品包括：
