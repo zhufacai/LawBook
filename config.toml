@@ -10,7 +10,7 @@ theme = "hugo-book"
   BookTheme = 'auto'
 
   BookToC = true
-  BookSection = 'posts'
+  BookSection = 'docs'
 
   BookSearch = true
   BookComments = false
