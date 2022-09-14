@@ -2,7 +2,7 @@
 title: 首页
 ---
 
-![](https://s2.loli.net/2022/03/17/EemiTDZlXO9SvfP.png)
+![](https://user-images.githubusercontent.com/14821269/190135517-c30d58b6-a359-4804-871e-8a37c9233fbf.jpeg)
 
 根据《中华人民共和国著作权法》第五条，本作品不适用于该法。如不受其他法律、法规保护，本作品在中国大陆和其他地区属于公有领域。不适用于《中华人民共和国著作权法》的作品包括：
 - （一）法律、法规，国家机关的决议、决定、命令和其他具有立法、行政、司法性质的文件，及其官方正式译文；
@@ -12,8 +12,6 @@ title: 首页
 法律内容来源于[国家法律法规数据库](https://flk.npc.gov.cn)，该项目仅做整合和搜索等功能，如果您在使用过程中发现部分法条有误，或不完整，请联系开发者进行修改。
 
 
-![Swift](https://img.shields.io/badge/swift-F54A2A?style=for-the-badge&logo=swift&logoColor=white)
-[![App Store](https://img.shields.io/badge/App_Store-0D96F6?style=for-the-badge&logo=app-store&logoColor=white)](https://apps.apple.com/app/apple-store/id1612953870?pt=124208302&ct=github&mt=8)
 
 # 收录信息
  - 法律: 396 部 [^1]
