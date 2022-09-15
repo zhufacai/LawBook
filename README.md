@@ -1,4 +1,6 @@
-# 中国法律快查手册
+---
+title: 中国法律快查手册
+---
 
 ![](https://user-images.githubusercontent.com/14821269/190138958-143072c7-4d89-45ca-96c3-e336eae3222e.jpeg)
 
