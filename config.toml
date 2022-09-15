@@ -15,4 +15,4 @@ theme = "hugo-book"
   BookSearch = true
   BookComments = false
   BookFlatSection = true
-  BookMenuBundle = '/content/menu'
+  BookMenuBundle = '/menu'
