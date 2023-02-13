@@ -2,7 +2,7 @@
 title: 首页
 ---
 
-![](https://user-images.githubusercontent.com/14821269/190338856-ee15e162-684c-4af8-bcec-4b031f7424d9.png)
+![](https://img.zhufacai.top/lawbook.png)
 
 # 收录信息 
  - 安全生产专栏：47 部 [^1]
