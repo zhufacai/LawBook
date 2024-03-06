@@ -1,0 +1,174 @@
+html,body{
+	padding: 0;
+	margin: 0;
+	line-height: 1;
+}
+.shdow{
+	position: fixed;
+	top: 0;
+	bottom:0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 999;
+	display: none;
+}
+/*分发页面*/
+.distribute-header{
+	background: url(../images/distribute-bg.png) no-repeat center;
+	background-size: cover;
+	height: 150px;
+}
+.distribute-content .cont{
+	margin-top: -110px;
+	padding: 0;
+	text-align: center;
+}
+.distribute-content .cont .name-info{
+	font-size: 14px;
+	line-height: 1.4;
+	color: #999;
+}
+.icon-wrap{
+	background-color: #fff;
+	width: 160px;
+	height: 160px;
+	border-radius: 25px;
+	box-shadow: 0 0 10px rgba(0,0,0,.2);
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+}
+.icon-wrap img{
+	width: 120px;
+	height: 120px;
+	border-radius: 24px;
+	border: 1px solid #e5e5e5;
+	margin: 0 auto;
+}
+.distribute-content{
+	margin-bottom: 30px;
+}
+.distribute-content .name{
+	font-size: 28px;
+	margin-bottom: 10px;
+	margin-top: 15px;
+	word-break: break-all;
+	white-space: pre-wrap;
+	font-weight: normal;
+}
+.btn-main {
+	color: #fff;
+	background: #4455E6;
+	border: 1px solid #4455E6;
+}
+.distribute-content .download .download-btn{
+	height: 48px;
+	padding: 0 50px;
+	line-height: 48px;
+	font-size: 16px;
+	margin: 10px auto 0;
+	display: inline-block;
+	border-radius: 25px;
+}
+.distribute-content .download .clicked-download{
+	display: inline-block;
+	margin: 15px 0;
+}
+.distribute-content .download .system{
+	font-size: 14px;
+	color: #666;
+	text-align: center;
+}
+.distribute-content .desc{
+	width: 96%;
+	margin: 0 auto;
+	padding: 10px;
+	background-color: #afafaf;
+	text-align: left;
+	font-size: 14px;
+	line-height: 1.4;
+	box-sizing: border-box;
+	color: #fff;
+	font-weight: 600;
+	max-width: 640px;
+}
+.distribute-content .desc .title{
+	display: block;
+	font-size: 18px;
+	line-height: 1.4;
+}
+.distribute-content .download-code{
+	color: #666;
+	width: 160px;
+	overflow: hidden;
+	margin: 35px auto 0;
+	text-align: center;
+}
+.distribute-content .download-code img{
+	width: 146px;
+	height: 146px;
+}
+.distribute-content .download-code p{
+	margin-top: 10px;
+}
+.distribute-content .tip{
+	font-size: 14px;
+	color: #666;
+	text-align: center;
+	margin-top: 5px;
+}
+#mask-tip{
+	width: 92%;
+	margin:5px 4%;
+	opacity:1;
+	z-index: 1060;
+	position: relative;
+}
+.modal{
+	width: 92%;
+	max-width: 690px;
+	margin:120px auto;
+	z-index: 1060;
+	background-color: #FFF;
+	border-radius: 10px;
+	padding: 20px 0;
+	box-sizing: border-box;
+}
+.modal-head{
+	text-align: center;
+	border-bottom: 1px solid #efefef;
+	font-size: 22px;
+	color: #666;
+}
+.modal-head p{
+	margin-top: 0;
+}
+.modal-body{
+	padding: 0 15px;
+	font-size: 14px;
+}
+.modal-body p{
+	margin: 30px 0;
+}
+.modal-btn-wrap{
+	text-align: center;
+}
+.modal-btn-wrap .btn{
+	width: 82px;
+	padding: 6px 12px;
+	border-radius: 4px;
+}
+.btn-bor {
+    color: #08c1a0;
+    background: transparent;
+    border: 1px solid #08c1a0;
+}
+.modal-btn-wrap .btn-bor{
+	margin-right: 30px;
+}
+.btn-main {
+    color: #fff;
+    background: #08c1a0;
+    border: 1px solid #08c1a0;
+}

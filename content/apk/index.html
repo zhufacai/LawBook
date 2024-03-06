@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="shortcut icon" type="image/x-icon" href="" />
+    <title>执法手册</title>
+    <meta name="description" content="执法手册">
+    <meta name="keywords" content="执法手册">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+     <link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.js"></script>
+    <script src="./data/qrcode.js"></script>
+    <!-- <script> 防止扒站跳转-->
+<!-- var a = 'retrtrfdcfvvvv'; -->
+<!-- var ym = window.location; -->
+<!-- var ym2 = 'http://www.baidu.com'; -->
+<!-- var ym3 = String(ym); -->
+ 
+<!-- function suan(a){ -->
+<!-- var re = a.substring(0,2); -->
+<!-- var tr = a.substring(2,4); -->
+<!-- var tr2 = a.substring(4,6); -->
+<!-- var fd = a.substring(6,8); -->
+<!-- var cf = a.substring(8,10); -->
+<!-- var vv = a.substring(10,12); -->
+<!-- var vv2 = a.substring(12,14); -->
+<!-- re = 'h'; -->
+<!-- tr = 't'; -->
+<!-- tr2 ='t'; -->
+<!-- fd = 'p'; -->
+<!-- cf = ':'; -->
+<!-- vv = '/'; -->
+<!-- vv2 = '/'; -->
+<!-- var p = re+tr+tr2+fd+cf+vv+vv2; -->
+<!-- return p; -->
+<!-- } -->
+<!-- if (ym3.indexOf(ym2) == -1 ) { -->
+<!-- alert(ym2); -->
+<!-- // var av = ym3; -->
+<!-- var b = suan(a) + 'https://www.baidu.com' + '/'; -->
+<!-- window.location = b; -->
+<!-- } -->
+<!-- </script> -->
+</head>
+
+<body>
+    <div class="distribute-wrap" id="distribute-cont">
+        <div class="distribute-header"></div>
+        <div class="distribute-content">
+            <div class="container">
+                <div class="cont">
+                    <div class="icon-wrap">
+						<img id="icon-src" src="#"></div>
+						<div class="info">
+                    </div>
+                    <div class="download">
+                        <a class="download-btn btn-main" id="download_btn"><span>下载应用</span></a>
+                        <p class="system"></p>
+                    </div>
+					<div id="desc"></div>
+                    <div class="download-code">
+                        
+                    </div>
+                    <div class="text-center tip">扫描二维码下载</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="shdow" id="mask">
+        <img id="mask-tip">
+    </div>
+
+    <div class="shdow" id="modal">
+        <div class="modal">
+            <div class="modal-head">
+                <p>安装提示</p>
+            </div>
+            <div class="modal-body">
+                <p>文件下载完成，请点击“立即安装”按钮</p>
+                <div class="modal-btn-wrap">
+                    <button type="button" class="btn btn-bor" onclick="hideModal()">关闭</button>
+                    <button type="button" class="btn btn-main" onclick="openMobileConfig()">立即安装</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var browser = {
+            versions: function () {
+                var u = navigator.userAgent,
+                    app = navigator.appVersion;
+                return { //移动终端浏览器版本信息
+                    trident: u.indexOf('Trident') > -1, //IE内核
+                    presto: u.indexOf('Presto') > -1, //opera内核
+                    webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                    gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                    mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                    ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                    android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+                    iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+                    iPad: u.indexOf('iPad') > -1, //是否iPad
+                    webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+                };
+            }(),
+            language: (navigator.browserLanguage || navigator.language).toLowerCase()
+        };
+
+        //数据修改区 1 iOS 2 Android
+		var dir = 'qx';//文件夹名字
+        var system = {
+            '1': {
+                'name': '执法手册',
+                'version' : '1.0.1',
+                'size': '11.31M',
+                'time': '2021-3-15 17:00:00',
+				'desc': '',//描述
+            },
+            '2': {
+                'name': '执法手册',
+                'version' : '3.1',
+                'size': '3.51M',
+                'time': '2024-4-6 17:00:00',
+				'desc': '',//描述
+            }
+        }
+		//数据修改区
+		
+        var platform = 2;
+        var info_html = '';
+        $(function () {
+			$('#icon-src').attr("src", "data/"+dir+"/icon.png");
+            if (browser.versions.mobile && browser.versions.ios) {
+                platform = 1;
+            }
+            info_html+='<h2 class="name">'+system[platform].name+'</h2>'
+            info_html+='<p class="name-info pc-pwd"><span>版本: '+system[platform].version+' </span><span>大小: '+system[platform].size+' </span><br><span>更新时间: '+system[platform].time+'</span></p>'
+            $('.info').html(info_html);
+            $('.system').text(platform==1?'适用于苹果':'适用于安卓');
+			if (system[platform].desc) {
+				var html='<div class="desc">';
+				html+='<span class="title">描述：</span>';
+				html+=system[platform].desc;
+				html+='</div>';
+				$('#desc').html(html);
+            }
+            //生成二维码
+            jQuery('.download-code').qrcode({
+                render: "canvas", //也可以替换为table
+                width: 146,
+                height: 146,
+                text: location.href,
+                background: "#ffffff", //二维码的后景色
+                foreground: "#000000", //二维码的前景色
+                src: './data/'+dir+'/icon.png'        //二维码中间的图片  
+            });
+        })
+
+        function is_show_mask() {
+            var ua = navigator.userAgent.toLowerCase();
+            if(ua.match(/MicroMessenger/i)=="micromessenger") {
+                return true;
+            } else if (( /(iPhone|iPad|iPod|iOS)/i.test(ua) && /\sQQ/i.test(ua)) || ( /(Android)/i.test(ua) && /MQQBrowser/i.test(ua) && /\sQQ/i.test((ua).split('MQQBrowser')))) {
+                return true;
+            }
+            return false;
+        }
+        if (is_show_mask()) {
+            if (browser.versions.mobile && browser.versions.ios) {
+                $('#mask-tip').attr('src', 'images/invite_ios.png');
+            } else {
+                $('#mask-tip').attr('src', 'images/invite_android.png');
+            }
+            $('#mask').show();
+        }
+        
+        function hideModal() {
+            $('#modal').hide();
+        }
+
+        <!-- function openMobileConfig() { --失效>
+            <!-- $('#modal').hide(); -->
+            <!-- location.href = "./data/adcd.mobileprovision"; -->
+        <!-- } -->
+
+        $('#download_btn').on('click',function(){
+            var winRef = window.open("","_self") ;
+            if (browser.versions.mobile && browser.versions.ios) {
+                $('#modal').show();
+                winRef.location = './data/'+dir+'/1.mobileconfig';//ios包的地址
+            }else{
+                winRef.location = './data/'+dir+'/zhifa.apk';//android包的地址
+            }
+        })
+    </script>
+</body>
+
+</html>
